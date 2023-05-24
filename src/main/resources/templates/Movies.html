@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies List - MVC</title>
+</head>
+<body>
+<h1>Brazilian Movies List</h1>
+<hr>
+
+<table>
+    <thead>
+    <tr>
+        <th> Name</th>
+        <th> Gender </th>
+        <th> Year </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movies:${movies}">
+        <td th:text="${movies.nome}">Name</td>
+        <td th:text="${movies.genero}">Gender</td>
+        <td th:text="${movies.ano}">Year</td>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
